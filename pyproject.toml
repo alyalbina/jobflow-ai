@@ -1,0 +1,10 @@
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "B", "UP"]
+[tool.ruff.lint.per-file-ignores]
+"jobflow/app.py" = ["B008"] # FastAPI dependency markers intentionally use defaults.
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

@@ -35,7 +35,11 @@ Albina defined the problem, target roles, geography, privacy requirements and ap
 
 ## Demo and screenshots
 
-Publication and browser verification are in progress. The final working demo URL and actual screenshots will be recorded here only after successful checks. The public interface is a functional browser sandbox, not a live Telegram client. Its fictional application outcomes demonstrate UI/analytics behavior and are not product results.
+The [GitHub Pages sandbox](https://alyalbina.github.io/jobflow-ai/) is being deployed; its live verification status is recorded in [validation](docs/validation.md). Actual local browser captures are below. The public interface is a functional browser sandbox, not a live Telegram client. Its fictional application outcomes demonstrate UI/analytics behavior and are not product results.
+
+![Actual fictional desktop workspace](docs/screenshots/overview-desktop.jpg)
+
+[Mobile overview](docs/screenshots/overview-mobile.jpg) · [Mobile CV Studio](docs/screenshots/studio-mobile.jpg)
 
 ## Windows setup
 
@@ -49,7 +53,9 @@ Advanced setup:
 python -m venv .venv
 # Windows: .venv\Scripts\activate
 # macOS/Linux: source .venv/bin/activate
-python -m pip install --no-cache-dir -r requirements.txt
+python -m pip install --no-cache-dir pip==26.2.1 setuptools==84.0.0 wheel==0.48.0
+python -m pip install --no-cache-dir --no-build-isolation -r requirements.txt
+python -c "import jobflow.app, jobflow.telegram_login"
 python -m jobflow.launch
 ```
 
@@ -86,12 +92,12 @@ The public build is generated from an explicit fictional seed and allowlisted as
 ## Testing
 
 ```bash
-python -m pip install -r requirements-dev.txt
+python -m pip install --no-cache-dir --no-build-isolation -r requirements-dev.txt
 python -m pytest -q
 python -m ruff check .
 node --check web/assets/app.js
 python -m scripts.build_demo
-python -m scripts.security_scan
+python -m scripts.check_public
 python -m pip_audit -r requirements.txt
 ```
 
@@ -99,7 +105,7 @@ Executed results, hardware probe, browser QA and outstanding owner authorization
 
 ## Limitations and roadmap
 
-Rule extraction can miss nonstandard titles, salary shorthand and nuanced restrictions. Exact normalized-text deduplication can conflate identical templates with different application links; compare the original source. Edit/delete reconciliation is bounded to the latest 30 known messages per source. Telegram API credentials, account access and opt-in bot delivery need owner configuration. The private interface initially loads the latest 1,000 jobs; the server archive search is available for older records. Multi-user access, encrypted-at-rest storage independent of the OS account, semantic embeddings and broader labelled parser evaluation are future work.
+Rule extraction can miss nonstandard titles, salary shorthand and nuanced restrictions. Exact normalized-text deduplication can conflate identical templates with different application links; compare the original source. Edit/delete reconciliation is bounded to the latest 30 known messages per source. Telegram API credentials, account access and opt-in bot delivery need owner configuration. The private interface initially loads the latest 1,000 jobs plus CRM-linked vacancies; paginated server archive search is available for older records. Multi-user access, encrypted-at-rest storage independent of the OS account, semantic embeddings and broader labelled parser evaluation are future work.
 
 After personal activation, first validate message coverage and evidence quality, then collect a labelled bounded set and weekly search-effort logs. Prioritize fixes from observed errors before expanding acquisition sources or submission automation. See [metrics](docs/metrics.md) and [CV/LinkedIn/interview materials](docs/portfolio.md).
 
