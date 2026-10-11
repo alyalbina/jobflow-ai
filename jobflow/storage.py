@@ -337,23 +337,19 @@ class Store:
         )
         times = []
         for app in apps:
-            if not app["applied_at"]:
+            if app["id"] not in applied or not app["applied_at"]:
                 continue
+            applied_date = datetime.fromisoformat(app["applied_at"])
             responses = [
-                e["at"]
+                datetime.fromisoformat(e["at"])
                 for e in events
                 if e["application_id"] == app["id"]
                 and e["to_status"]
                 in ("Recruiter Screening", "Interview", "Test Assignment", "Offer", "Rejected")
-                and e["at"] >= app["applied_at"]
+                and datetime.fromisoformat(e["at"]) >= applied_date
             ]
             if responses:
-                times.append(
-                    (
-                        datetime.fromisoformat(min(responses)) - datetime.fromisoformat(app["applied_at"])
-                    ).total_seconds()
-                    / 86400
-                )
+                times.append((min(responses) - applied_date).total_seconds() / 86400)
         from collections import Counter
 
         messages = self.rows("SELECT * FROM messages")
@@ -381,7 +377,11 @@ class Store:
             for app in apps:
                 job = job_by_id.get(app["job_id"], {})
                 key = (
-                    cv_names.get(app["cv_id"], "Not linked")
+                    (
+                        f"CV {app['cv_id']} · {cv_names[app['cv_id']]}"
+                        if app["cv_id"] in cv_names
+                        else "Not linked"
+                    )
                     if dimension == "cv"
                     else job.get(dimension) or "Unknown"
                 )
