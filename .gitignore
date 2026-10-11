@@ -1,0 +1,12 @@
+.venv/
+private/
+.env
+*.session*
+*.sqlite*
+*.db
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+work/
+dist/
