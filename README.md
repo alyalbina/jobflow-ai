@@ -37,6 +37,10 @@ Albina defined the problem, target roles, geography, privacy requirements and ap
 
 The [GitHub Pages sandbox](https://alyalbina.github.io/jobflow-ai/) is being deployed; its live verification status is recorded in [validation](docs/validation.md). Actual local browser captures are below. The public interface is a functional browser sandbox, not a live Telegram client. Its fictional application outcomes demonstrate UI/analytics behavior and are not product results.
 
+![Actual fictional desktop workspace](docs/screenshots/overview-desktop.jpg)
+
+[Mobile overview](docs/screenshots/overview-mobile.jpg) · [Mobile CV Studio](docs/screenshots/studio-mobile.jpg)
+
 ## Windows setup
 
 Install Python 3.12, unpack the project and double-click **Install-Windows.cmd**, then **Start-JobFlow.cmd**. Read the [Russian step-by-step guide](docs/windows-guide.md). The launcher restricts `private/` permissions, opens a one-time local login link and starts the app on `127.0.0.1:8765`.

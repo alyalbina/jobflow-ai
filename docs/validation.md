@@ -4,7 +4,7 @@ Date: 11 October 2026. Local environment: Windows, Python 3.12.2. All inputs use
 
 ## Automated checks
 
-`python -m pytest -q`: **53 passed**, no skips, in 10.26 seconds on the last run before publication preparation. The current Starlette TestClient reports one upstream deprecation warning about its httpx adapter; assertions pass. CI results are recorded after remote execution below.
+`python -m pytest -q`: **54 passed**, no skips, in 8.89 seconds on the last run before publication preparation. The current Starlette TestClient reports one upstream deprecation warning about its httpx adapter; assertions pass. CI results are recorded after remote execution below.
 
 Coverage includes bilingual extraction/missing fields, non-vacancy classifications, required versus preferred skills, inferred-evidence exclusion, confirmed versus unknown eligibility, seniority/language rules, atomic message/cursor persistence, deduplication, edits/deletes, durable status history, manual Applied confirmation, CV evidence provenance through tailored versions, immutable edited letter versions, archive pagination, DOCX imports/exports, grounded drafts, unsupported/network-failed local model responses, mock Telethon backfill/catch-up/reconciliation/flood wait, notification deduplication/ambiguous delivery, API authentication/Origin/CSRF/Host checks, manual corrections, weekly measurement, backup/restore/delete and public-build canary isolation. Eight Node-based scenarios compare the public and private matching policy.
 

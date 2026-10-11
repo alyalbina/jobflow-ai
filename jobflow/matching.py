@@ -57,7 +57,9 @@ def match(job, profile):
         gaps.append(f"Industry experience is not confirmed: {domain}")
     elif domain:
         why.append(f"Approved industry evidence: {domain}")
-    unknowns += [f"Inferred only; verify before claiming: {s}" for s in sorted(set(required) & inferred)]
+    unknowns += [
+        f"Inferred only; verify before claiming: {s}" for s in sorted((set(required) & inferred) - supported)
+    ]
     role_fit = job.get("role") in profile.get("roles", [])
     if job.get("role") and not role_fit:
         hard.append("Role is outside selected directions")

@@ -13,7 +13,7 @@ The public GitHub Pages demo uses an allowlisted synthetic dataset and a browser
 3. CRM and CV Studio: immutable evidence/version references, letters, timeline/follow-ups — implemented and locally checked.
 4. Optional local AI: availability/hardware check and bounded evidence selection — implemented and locally checked.
 5. Analytics/notifications: event-based funnels and durable notification outbox — implemented and locally checked.
-6. QA/publication: 53 passing local tests, desktop/mobile browser checks, isolated public demo, README/case/career materials completed locally. GitHub CI and public Pages verification in progress.
+6. QA/publication: 54 passing local tests, desktop/mobile browser checks, isolated public demo, README/case/career materials completed locally. GitHub CI and public Pages verification in progress.
 
 ## Connection dependencies
 
@@ -25,4 +25,4 @@ Bounded initial import; durable catch-up without cursor gaps; deduplication; edi
 
 ## Verification checkpoint
 
-53 local tests passed, including eight public/private scorer parity scenarios. Ruff/JavaScript/public-boundary checks and pinned dependency audit executed. Installed qwen3:8b executed the production evidence selector on fictional input. Browser QA covered discovery, CRM, CV upload/provenance/tailoring, letter edits and mobile navigation. Live Telegram and bot activation remain owner-local dependencies; no real operation or hiring improvement is claimed.
+54 local tests passed, including eight public/private scorer parity scenarios. Ruff/JavaScript/public-boundary checks and pinned dependency audit executed. Installed qwen3:8b executed the production evidence selector on fictional input. Browser QA covered discovery, CRM, CV upload/provenance/tailoring, letter edits and mobile navigation. Live Telegram and bot activation remain owner-local dependencies; no real operation or hiring improvement is claimed.

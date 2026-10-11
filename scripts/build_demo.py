@@ -105,13 +105,18 @@ def seed(store):
             )
             + f"Apply: https://example.com/fictional-job-{i + 1}\nThis entire vacancy is synthetic demonstration data."
         )
-        store.ingest(
+        result = store.ingest(
             i % 3 + 1,
             i + 1,
             text,
             (base + timedelta(hours=i)).isoformat(),
             f"https://example.com/fictional-source/post-{i + 1}",
         )
+        with store.connect() as db:
+            db.execute(
+                "UPDATE jobs SET first_discovered_at=? WHERE id=?",
+                ((base + timedelta(hours=i, minutes=15)).isoformat(), result["job_id"]),
+            )
     for i, status in [
         (1, "Interview"),
         (2, "Applied"),

@@ -72,6 +72,22 @@ def test_unknown_required_language_requires_review():
     assert "English proficiency is unknown" in result["unknowns"]
 
 
+def test_supported_skill_is_not_mislabelled_as_inferred_only():
+    p = profile()
+    p["facts"].append(
+        {
+            "id": "proposal",
+            "text": "An unchecked SQL proposal",
+            "skills": ["SQL"],
+            "status": "inferred",
+            "approved": False,
+        }
+    )
+    result = match(parse(TEXT), p)
+    assert "Supported skill: SQL" in result["why"]
+    assert not any("Inferred only" in reason for reason in result["unknowns"])
+
+
 def test_unicode_pdf_export_roundtrips_actual_text():
     from io import BytesIO
 
