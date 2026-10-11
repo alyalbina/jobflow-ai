@@ -35,11 +35,11 @@ Albina defined the problem, target roles, geography, privacy requirements and ap
 
 ## Demo and screenshots
 
-The [GitHub Pages sandbox](https://alyalbina.github.io/jobflow-ai/) is being deployed; its live verification status is recorded in [validation](docs/validation.md). Actual local browser captures are below. The public interface is a functional browser sandbox, not a live Telegram client. Its fictional application outcomes demonstrate UI/analytics behavior and are not product results.
+The [GitHub Pages sandbox](https://alyalbina.github.io/jobflow-ai/) and [English product case](https://alyalbina.github.io/jobflow-ai/case-study.html) are published and browser-verified. Executed CI, deployment and user-flow evidence are recorded in [validation](docs/validation.md). The public interface is a functional browser sandbox, not a live Telegram client. Its fictional application outcomes demonstrate UI/analytics behavior and are not product results.
 
-![Actual fictional desktop workspace](docs/screenshots/overview-desktop.jpg)
+![Actual published fictional desktop workspace](docs/screenshots/published-demo.jpg)
 
-[Mobile overview](docs/screenshots/overview-mobile.jpg) · [Mobile CV Studio](docs/screenshots/studio-mobile.jpg)
+[Mobile overview](docs/screenshots/overview-mobile.jpg) · [Mobile CV Studio](docs/screenshots/studio-mobile.jpg) · [Dark theme](docs/screenshots/settings-dark.jpg) · [Published case](docs/screenshots/published-case.jpg)
 
 ## Windows setup
 

@@ -46,7 +46,13 @@ Initial history, catch-up, edits/deletes, flood wait and failure recovery were e
 
 ## Remote publication
 
-GitHub CI and public Pages verification: pending remote execution. Do not infer success from workflow files. This section will be updated with actual run links and the observed public URL.
+Repository: [alyalbina/jobflow-ai](https://github.com/alyalbina/jobflow-ai). [Implementation PR #1](https://github.com/alyalbina/jobflow-ai/pull/1) merged on 11 October 2026 after all four checks passed. The checked feature commit was `38985a0d82f9ebf1282233bb3568d660c13530f3`; its [PR CI run](https://github.com/alyalbina/jobflow-ai/actions/runs/38162716937) completed successfully.
+
+The merged commit `63598dcf263f3846582b9d637d0ac3db8ba35b48` passed [main CI](https://github.com/alyalbina/jobflow-ai/actions/runs/38162847380): Windows and Linux, each with Python 3.12 and 3.13. Each job executes actual runtime imports, Ruff, 56 tests, JavaScript syntax, the isolated public build/boundary scan and pinned runtime dependency audit. The [Pages workflow](https://github.com/alyalbina/jobflow-ai/actions/runs/38162847376) completed both build and deploy successfully.
+
+Visited the actual deployed [HTTPS sandbox](https://alyalbina.github.io/jobflow-ai/) in a fresh browser tab. The initial state showed 24 fictional vacancies and six fictional application records. Country filtering returned six UAE vacancies. A detail view displayed original text, supported skills and unspecified fields. Applied without confirmation was rejected; Preparing was saved and appeared in Kanban. Basic Mode generated and saved a letter composed of approved fictional statements. The deployed [English case study](https://alyalbina.github.io/jobflow-ai/case-study.html) showed all twelve sections and the link to this report. No real Telegram or personal CV data was used.
+
+Actual deployed captures: [workspace](screenshots/published-demo.jpg), [case study](screenshots/published-case.jpg). These are observations of the published product, not mockups. Documentation and these captures are committed after the checked implementation merge; final delivery also rechecks its CI/deployment.
 
 ## Practical limits
 

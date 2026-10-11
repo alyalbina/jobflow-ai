@@ -13,7 +13,7 @@ The public GitHub Pages demo uses an allowlisted synthetic dataset and a browser
 3. CRM and CV Studio: immutable evidence/version references, letters, timeline/follow-ups — implemented and locally checked.
 4. Optional local AI: availability/hardware check and bounded evidence selection — implemented and locally checked.
 5. Analytics/notifications: event-based funnels and durable notification outbox — implemented and locally checked.
-6. QA/publication: 56 passing local tests, desktop/mobile browser checks, isolated public demo, README/case/career materials completed locally. GitHub CI and public Pages verification in progress.
+6. QA/publication: 56 passing local tests, desktop/mobile browser checks, isolated public demo, README/case/career materials completed. Implementation PR merged after Windows/Linux CI passed on Python 3.12/3.13. GitHub Pages published and its actual discovery, CRM, factual draft and twelve-section case checked in the browser; see [executed evidence](validation.md).
 
 ## Connection dependencies
 
@@ -25,4 +25,4 @@ Bounded initial import; durable catch-up without cursor gaps; deduplication; edi
 
 ## Verification checkpoint
 
-56 local tests passed, including eight public/private scorer parity scenarios. Ruff/JavaScript/public-boundary checks and pinned dependency audit executed. Installed qwen3:8b executed the production evidence selector on fictional input. Browser QA covered discovery, CRM, CV upload/provenance/tailoring, letter edits and mobile navigation. Live Telegram and bot activation remain owner-local dependencies; no real operation or hiring improvement is claimed.
+56 local tests passed, including eight public/private scorer parity scenarios. Ruff/JavaScript/public-boundary checks and pinned dependency audit executed. Installed qwen3:8b executed the production evidence selector on fictional input. Browser QA covered discovery, CRM, CV upload/provenance/tailoring, letter edits and mobile navigation. The installed product environment passed module imports and the private login/empty-state contract. Windows native folder ACL tightening could not be verified from the Codex sandbox and remains an owner-operated launch check. Live Telegram and bot activation remain owner-local dependencies; no real operation or hiring improvement is claimed.
