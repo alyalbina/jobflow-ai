@@ -19,7 +19,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: python -m pip install --no-cache-dir -r requirements-dev.txt
+      - run: python -m pip install --no-cache-dir pip==26.2.1 setuptools==84.0.0 wheel==0.48.0
+      - run: python -m pip install --no-cache-dir --no-build-isolation -r requirements-dev.txt
+      - run: python -c "import jobflow.app, jobflow.telegram_login"
       - run: python -m ruff check jobflow scripts tests
       - run: python -m ruff format --check jobflow scripts tests
       - run: python -m pytest -q

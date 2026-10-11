@@ -26,7 +26,11 @@ Checked the actual FastAPI app against a separate fictional QA database on loopb
 - Mobile layout and navigation at 390×844. Root content fits the viewport; Kanban/table content scrolls within its container.
 - PDF export rendered through Poppler and visually inspected: Latin/Cyrillic text and bullets are readable with no clipping in the one-page fictional fixture. DOCX content is reopened in automated tests.
 
-Actual captures: [desktop](screenshots/overview-desktop.jpg), [mobile](screenshots/overview-mobile.jpg), [mobile CV Studio](screenshots/studio-mobile.jpg). Additional final publication captures are added after verification.
+Actual captures: [desktop](screenshots/overview-desktop.jpg), [mobile](screenshots/overview-mobile.jpg), [mobile CV Studio](screenshots/studio-mobile.jpg), [dark theme](screenshots/settings-dark.jpg). Additional final publication captures are added after verification.
+
+The installed project `.venv` imports the actual FastAPI and Telethon modules. A launcher smoke check verified loopback configuration, one-time authentication, 22 disabled sources and an empty owner profile/database. Its browser opening, server loop and native ACL command were substituted. The Codex Windows sandbox denies `WRITE_DAC`, so owner-operated folder permission tightening and the full double-click launch remain unverified here. The product retains its fail-fast permission check. No real private data was used.
+
+Installer QA caught an empty legacy `pyaes` wheel produced by the older pip even though `pip check` passed. The installer now pins modern build tools, rebuilds that dependency without the cache and checks actual module imports; the repaired installed runtime passed imports. CI exercises the same build-tool bootstrap on Windows and Linux.
 
 ## Installed local AI observation
 

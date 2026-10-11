@@ -53,7 +53,9 @@ Advanced setup:
 python -m venv .venv
 # Windows: .venv\Scripts\activate
 # macOS/Linux: source .venv/bin/activate
-python -m pip install --no-cache-dir -r requirements.txt
+python -m pip install --no-cache-dir pip==26.2.1 setuptools==84.0.0 wheel==0.48.0
+python -m pip install --no-cache-dir --no-build-isolation -r requirements.txt
+python -c "import jobflow.app, jobflow.telegram_login"
 python -m jobflow.launch
 ```
 
@@ -90,12 +92,12 @@ The public build is generated from an explicit fictional seed and allowlisted as
 ## Testing
 
 ```bash
-python -m pip install -r requirements-dev.txt
+python -m pip install --no-cache-dir --no-build-isolation -r requirements-dev.txt
 python -m pytest -q
 python -m ruff check .
 node --check web/assets/app.js
 python -m scripts.build_demo
-python -m scripts.security_scan
+python -m scripts.check_public
 python -m pip_audit -r requirements.txt
 ```
 
