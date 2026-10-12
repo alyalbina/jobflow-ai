@@ -573,6 +573,10 @@ def create_app(data_dir=None, bootstrap=None, testing=False):
     async def case_study():
         return FileResponse(ROOT / "web/case-study.html", media_type="text/html")
 
+    @app.get("/case-study.ru.html")
+    async def case_study_ru():
+        return FileResponse(ROOT / "web/case-study.ru.html", media_type="text/html")
+
     app.mount("/assets", StaticFiles(directory=ROOT / "web/assets"), name="assets")
     return app
 

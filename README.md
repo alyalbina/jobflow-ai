@@ -1,4 +1,17 @@
+![JobFlow AI — From scattered opportunities to a clear next step](web/assets/portfolio/cover.png)
+
 # JobFlow AI
+
+### A job search. With direction.
+
+**Product thinking · Explainable AI · Local-first workflows**
+
+[Explore the demo ↗](https://alyalbina.github.io/jobflow-ai/) · [Read the designed case ↗](https://alyalbina.github.io/jobflow-ai/case-study.html) · [Кейс на русском ↗](https://alyalbina.github.io/jobflow-ai/case-study.ru.html)
+
+**Albina Urubkina** · Independent product project · AI-assisted implementation  
+Public sandbox data is fictional. Real CVs, Telegram sessions and application history stay local.
+
+---
 
 **AI-powered job discovery, explainable CV matching, and application tracking — built around Telegram job communities.**
 

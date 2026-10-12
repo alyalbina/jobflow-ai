@@ -172,7 +172,7 @@ def build():
         (ROOT / "web/assets/demo-data.json").write_text(dumps(state) + "\n", encoding="utf-8")
     dist = ROOT / "dist"
     dist.mkdir(exist_ok=True)
-    for name in ("index.html", "case-study.html"):
+    for name in ("index.html", "case-study.html", "case-study.ru.html"):
         if (ROOT / "web" / name).exists():
             shutil.copy2(ROOT / "web" / name, dist / name)
     shutil.copytree(ROOT / "web/assets", dist / "assets", dirs_exist_ok=True)
@@ -180,10 +180,22 @@ def build():
     allowed = {
         "index.html",
         "case-study.html",
+        "case-study.ru.html",
         ".nojekyll",
         "assets/app.js",
         "assets/styles.css",
         "assets/demo-data.json",
+        "assets/portfolio/case.css",
+        "assets/portfolio/fonts.css",
+        "assets/portfolio/cover.svg",
+        "assets/portfolio/cover.png",
+        "assets/portfolio/social-preview.png",
+        "assets/portfolio/workspace.jpg",
+        "assets/portfolio/manrope-OFL.txt",
+        "assets/portfolio/manrope-latin-400-normal.woff2",
+        "assets/portfolio/manrope-latin-600-normal.woff2",
+        "assets/portfolio/manrope-cyrillic-400-normal.woff2",
+        "assets/portfolio/manrope-cyrillic-600-normal.woff2",
     }
     assert {p.relative_to(dist).as_posix() for p in dist.rglob("*") if p.is_file()} <= allowed
     assert json.loads((dist / "assets/demo-data.json").read_text(encoding="utf-8"))["synthetic"] is True
