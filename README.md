@@ -52,7 +52,7 @@ The [GitHub Pages sandbox](https://alyalbina.github.io/jobflow-ai/) and [English
 
 ![Actual published fictional desktop workspace](docs/screenshots/published-demo.jpg)
 
-[Mobile overview](docs/screenshots/overview-mobile.jpg) · [Mobile CV Studio](docs/screenshots/studio-mobile.jpg) · [Dark theme](docs/screenshots/settings-dark.jpg) · [Published case](docs/screenshots/published-case.jpg)
+[Mobile overview](docs/screenshots/overview-mobile.jpg) · [Mobile CV Studio](docs/screenshots/studio-mobile.jpg) · [Dark theme](docs/screenshots/settings-dark.jpg) · [Redesigned case: EN](docs/screenshots/redesigned-case-en.jpg) · [RU](docs/screenshots/redesigned-case-ru.jpg)
 
 ## Windows setup
 
@@ -122,4 +122,4 @@ Rule extraction can miss nonstandard titles, salary shorthand and nuanced restri
 
 After personal activation, first validate message coverage and evidence quality, then collect a labelled bounded set and weekly search-effort logs. Prioritize fixes from observed errors before expanding acquisition sources or submission automation. See [metrics](docs/metrics.md) and [CV/LinkedIn/interview materials](docs/portfolio.md).
 
-**License:** MIT source code. Public data is fictional demonstration material; real imported channel content remains private and subject to its source terms.
+**License:** MIT source code. Manrope typography: SIL OFL 1.1 ([font license](web/assets/portfolio/manrope-OFL.txt)). Public data is fictional demonstration material; real imported channel content remains private and subject to its source terms.

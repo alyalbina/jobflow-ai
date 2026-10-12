@@ -19,3 +19,9 @@ The presentation distinguishes product requirements, AI-assisted implementation,
 ## Verification on 13 October 2026
 
 The public package builds with an explicit allowlist, the public-boundary scan passes, and all 56 existing automated tests pass. Ruff lint and formatting checks pass. Local integrity inspection finds no missing case-page assets or section anchors. Public browser checks and screenshots are recorded separately after deployment.
+
+## Published browser review on 13 October 2026
+
+Both language versions loaded in the public Pages deployment. The published screenshot asset loaded, the local Manrope typography rendered, and the desktop document had no horizontal overflow at a 1348 CSS-pixel viewport. Language links and section navigation were exercised. These checks cover the case presentation, not a new cross-device certification of the underlying app.
+
+[English case capture](screenshots/redesigned-case-en.jpg) · [Russian case capture](screenshots/redesigned-case-ru.jpg). The captures are unmodified browser screenshots. README covers and GitHub social previews are separately authored presentation graphics.
